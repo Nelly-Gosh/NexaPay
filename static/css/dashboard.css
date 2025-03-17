@@ -1,0 +1,297 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: white;
+}
+
+/* Sidebar */
+.sidebar-container {
+  width: 300px;
+  background: white;
+  color: rgb(6, 12, 9);
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  box-shadow: 0px 0px 10px rgba(53, 51, 51, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar-container ul {
+  padding: 0;
+}
+
+.sidebar-container ul li {
+  padding: 12px;
+  transition: 0.3s ease;
+}
+
+.sidebar-container ul li:hover {
+  background: #23d313;
+  border-radius: 5px;
+}
+
+.sidebar-container ul li:hover a {
+  color: white;
+}
+
+.sidebar-icon {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #19d400;
+  transition: color 0.3s ease;
+}
+
+.sidebar-icon:hover {
+  color: #f5f5f5;
+}
+
+/* Logo and Hamburger Menu */
+.navbar {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 10px 20px;
+  box-shadow: 0px 0px 10px rgba(53, 51, 51, 0.5);
+}
+
+.logo h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: rgb(0, 255, 42);
+  text-shadow: 1px 1px coral, 3px 3px 4px grey;
+}
+
+.logo .red {
+  color: #ff4747;
+}
+
+.bars {
+  display: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  color: white;
+  background-color: #19d400;
+  padding: 8px;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 300px;
+  padding: 20px;
+}
+
+.content-section {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Overview Section */
+.general-container {
+  display: flex;
+}
+
+.overview-section {
+  width: 70%;
+  padding: 30px;
+}
+
+.overview-title h1 {
+  font-size: larger;
+}
+
+.overview-title span {
+  color: #19d400;
+}
+
+.account-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding-top: 50px;
+}
+
+.account-info {
+  width: 200px;
+  height: 100px;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px rgba(53, 51, 51, 0.5);
+  text-align: center;
+  padding: 30px;
+}
+
+.recent-transaction {
+  min-height: 300px;
+  margin-top: 80px;
+  background-color: whitesmoke;
+  padding: 20px;
+}
+
+.recent-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.view-btn {
+  width: 100px;
+  height: 30px;
+  font-weight: bold;
+  background-color: #23d313;
+  color: white;
+  border: 1px solid white;
+}
+
+.transaction-box {
+  height: 50px;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  border-left: 2px solid #19d400;
+  padding: 20px;
+}
+
+/* Card Section */
+.general-card-section {
+  width: 25%;
+  min-height: 100vh;
+  background-color: whitesmoke;
+  position: fixed;
+  top: 0;
+  right: 10px;
+}
+
+.profile {
+  height: 100px;
+  background: linear-gradient(to right, rgb(197, 50, 50), rgb(30, 194, 30));
+  position: relative;
+}
+
+.profile-circle {
+  width: 100px;
+  height: 100px;
+  font-size: 50px;
+  text-decoration: solid;
+  border-radius: 50%;
+  background-color: white;
+  color: #19d400;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  position: absolute;
+  left: 100px;
+  top: 40px;
+  z-index: 1;
+}
+
+.card-section {
+  padding: 70px 20px 20px 20px;
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 30px;
+  justify-content: center;
+}
+
+.card-image img {
+  max-width: 300px;
+}
+
+.left-icon,
+.right-icon {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(24, 241, 5, 0.6);
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.left-icon {
+  left: 10px;
+}
+
+.right-icon {
+  right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar-container {
+    transform: translateX(-100%);
+    width: 300px;
+    position: fixed;
+    height: 100vh;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+  }
+  .sidebar-container.active {
+    transform: translateX(0);
+  }
+  .navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  /* Adjust main content */
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 50px;
+   
+  }
+  .bars {
+    display: block;
+    top: 20px;
+    left: 20px;
+  }
+  .general-card-section {
+    display: none;
+  }
+
+  .overview-section {
+    width: 100%;
+     margin: auto;
+  }
+}

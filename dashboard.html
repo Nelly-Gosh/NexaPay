@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NexaPay | Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./static/css/dashboard.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <h1>Nexa<span class="red">Pay</span></h1>
+      </div>
+      <div class="bars">
+        <i class="fa fa-bars"></i>
+      </div>
+    </nav>
+
+    <aside class="sidebar-container">
+      <div class="logo">
+        <h1>Nexa<span class="red">Pay</span></h1>
+      </div>
+      <ul>
+        <li class="sidebar-link" data-section="overview">
+          <a href="#"> <i class="fa fa-home sidebar-icon"></i> Overview </a>
+        </li>
+        <li class="sidebar-link" data-section="deposit">
+          <a href="#">
+            <i class="fa fa-wallet sidebar-icon"></i> Deposit Money
+          </a>
+        </li>
+        <li class="sidebar-link" data-section="transfer">
+          <a href="#">
+            <i class="fa fa-exchange-alt sidebar-icon"></i> Transfer Money
+          </a>
+        </li>
+        <li class="sidebar-link" data-section="transactions">
+          <a href="#">
+            <i class="fa fa-list-alt sidebar-icon"></i> Transaction History
+          </a>
+        </li>
+        <li class="sidebar-link" data-section="beneficiary">
+          <a href="#">
+            <i class="fa fa-users sidebar-icon"></i> Beneficiary Management
+          </a>
+        </li>
+        <li class="sidebar-link" data-section="cards">
+          <a href="#">
+            <i class="fa fa-credit-card sidebar-icon"></i> Card Services
+          </a>
+        </li>
+        <li class="sidebar-link" data-section="loan">
+          <a href="#">
+            <i class="fa fa-hand-holding-usd sidebar-icon"></i> Loan
+          </a>
+        </li>
+        <li class="sidebar-link" data-section="profile">
+          <a href="#"> <i class="fa fa-user sidebar-icon"></i> Profile </a>
+        </li>
+        <li class="sidebar-link" data-section="logout">
+          <a href="#">
+            <i class="fa fa-sign-out-alt sidebar-icon"></i> Logout
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <!-- Overview Section -->
+      <section class="content-section" id="overview">
+        <div class="general-container">
+          <div class="overview-section">
+            <div class="overview-title">
+              <h1>Welcome, <span>Kelly</span></h1>
+              <small
+                >Access and manage your account and transaction
+                efficiently</small
+              >
+            </div>
+            <div class="account-summary">
+              <div class="account-info">
+                <p>Account Type:</p>
+                <b>Current</b>
+              </div>
+              <div class="account-info">
+                <p>Account number:</p>
+                <b>2399624356 <i class="fa fa-copy"></i></b>
+              </div>
+              <div class="account-info">
+                <p>Total Current Balance:</p>
+                <b>$0.00</b>
+              </div>
+            </div>
+            <div class="recent-transaction">
+              <div class="recent-title">
+                <strong>Recent transaction</strong>
+                <button class="view-btn">View All</button>
+              </div>
+              <br />
+              <br />
+              <div class="transaction-box">No recent transaction</div>
+            </div>
+          </div>
+          <!-- card section -->
+          <div class="general-card-section">
+            <div class="profile">
+              <div class="profile-circle">
+                <b> K</b>
+              </div>
+            </div>
+            <div class="card-section">
+              <h1>Kenny Kelly</h1>
+              <p>nellygosh5@gmail.com</p>
+              <br />
+              <br />
+              <br />
+              <div class="card-title">
+                <h3>My Card</h3>
+                <div>
+                  <p>Add Card <button>+</button></p>
+                </div>
+              </div>
+              <div class="card-container">
+                <div class="left-icon" onclick="scrollLeft()">
+                  <i class="fa fa-chevron-left"></i>
+                </div>
+                <div class="card-image">
+                  <img src="./static/assets/images/paymaster-card.jpg" alt="" />
+                </div>
+                <div class="right-icon" onclick="scrollRight()">
+                  <i class="fa fa-chevron-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Deposit Money Section -->
+      <section class="content-section hidden" id="deposit">
+        <h2>Deposit Money</h2>
+        <p>Select your deposit method and add funds.</p>
+      </section>
+
+      <!-- Transfer Money Section -->
+      <section class="content-section hidden" id="transfer">
+        <h2>Transfer Money</h2>
+        <p>Send money securely and quickly.</p>
+      </section>
+
+      <!-- Transaction History Section -->
+      <section class="content-section hidden" id="transactions">
+        <h2>Transaction History</h2>
+        <p>View all your past transactions here.</p>
+      </section>
+
+      <!-- Beneficiary Management Section -->
+      <section class="content-section hidden" id="beneficiary">
+        <h2>Beneficiary Management</h2>
+        <p>Manage your saved beneficiaries.</p>
+      </section>
+
+      <!-- Card Services Section -->
+      <section class="content-section hidden" id="cards">
+        <h2>Card Services</h2>
+        <p>Manage your credit and debit cards.</p>
+      </section>
+
+      <!-- Loan Section -->
+      <section class="content-section hidden" id="loan">
+        <h2>Loan</h2>
+        <p>Apply for and manage your loans.</p>
+      </section>
+
+      <!-- Profile Section -->
+      <section class="content-section hidden" id="profile">
+        <h2>Profile</h2>
+        <p>Update your personal and account details.</p>
+      </section>
+      <!-- Logout section -->
+      <section class="content-section hidden" id="logout">
+        <h2>Logout</h2>
+      </section>
+    </main>
+
+    <script src="./static/js/dashboard.js"></script>
+    <script src="./static/js/all.js"></script>
+  </body>
+</html>
